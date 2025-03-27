@@ -11,26 +11,8 @@ terraform {
 provider "google" {
   project = var.project_id
   region  = var.region
-  zone    = var.zone
 }
 
-# Variables
-variable "project_id" {
-  description = "GCP Project ID"
-  type        = string
-}
-
-variable "region" {
-  description = "GCP Region"
-  default     = "us-central1"
-  type        = string
-}
-
-variable "zone" {
-  description = "GCP Zone"
-  default     = "us-central1-a"
-  type        = string
-}
 
 # Network Configuration
 resource "google_compute_network" "devlake_network" {
